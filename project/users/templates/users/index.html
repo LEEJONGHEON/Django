@@ -1,0 +1,286 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>蜜蜂网站</title>
+  <meta charset="utf-8" />
+  <link href="../../../static/bootstrap.min.css" rel="stylesheet" type="text/css"><!--부트캠프 링크 연결-->
+  <script type="text/javascript" src="../../../static/what_time_is_it.js"></script>
+  <script src="https://kit.fontawesome.com/ecc552a89d.js" crossorigin="anonymous"></script>
+  <style>
+   .div1{
+    background-color:gold;
+    }
+  </style>
+</head>
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+
+  <div class="container">
+    <a class="navbar-brand" href=""><i class="fab fa-forumbee"></i>蜜蜂</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+        <a class="nav-link" href="">主页<span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/post">公告栏</a>
+      </li>
+    </ul>
+
+
+    <!-- before Login -->
+    {% if user.is_authenticated %}
+    <ul class="navbar-nav">
+      <li class="nav-item">
+        <a class="nav-link" href="">{{ user }} 欢迎</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="logout"><i class="fas fa-sign-out-alt"></i>退出</a>
+      </li>
+    </ul>
+    {% else %}
+    <ul class="navbar-nav">
+      <li class="nav-item">
+        <a class="nav-link" href="/auth/login"><i class="fas fa-sign-in-alt"></i>登录</a>
+      </li>
+    </ul>
+    <ul class="navbar-nav">
+      <li class="nav-item">
+        <a class="nav-link" href="/auth/register"><i class="fas fa-sign-in-alt"></i>注册</a>
+      </li>
+    </ul>
+    {% endif %}
+    <!-- before Login    -->
+  </div>
+
+
+  </div>
+  
+</nav>
+
+
+<body class="div1">
+  <div class="container">
+    <div class="row my-3">
+      <div class="col-9">
+        <h1>蜜蜂的象征意义</h1>
+    <p>一、勤劳精神
+	<p>
+		蜜蜂象征着勤劳精神，“勤劳”二字对蜜蜂来说也是名副其实的，事实上在蜜蜂短暂的一生中几乎没有从工作中停歇过，数据表明在流蜜期蜜蜂的平均寿命只有30～40天，而过度劳累则是导致蜜蜂寿命短暂的主要原因。
+	</p>
+</p>
+<p>二、团队精神
+	<p>
+		蜜蜂象征着团队精神，蜂群中有蜂王、工蜂和雄蜂三型蜂，其中数量庞大的工蜂群又可分为哺育蜂、筑巢蜂、采集蜂、守卫蜂、侦查蜂等，这些蜜蜂不但各司其职且又能高效协作，这在其他动物世界几乎是做不到的。
+	</p>
+</p>
+<p>三、奉献精神
+	<p>
+		蜜蜂象征着奉献精神，而“终日酿蜜身心劳，甜蜜人间世人效”、“采得百花成蜜后，为谁辛苦为谁甜？”等诗句便是蜜蜂奉献精神的真实写照，此外蜜蜂在守卫蜂群安全时也不惧牺牲，哪怕为此付出生命也绝不犹豫。
+
+	</p>
+</p>
+<p>四、务实精神
+	<p>
+		蜜蜂象征着务实精神，在植物开花季节不厌其烦的采撷每一朵花，而且蜜蜂采花酿蜜是非常艰辛的，数据表明蜜蜂酿造1000克蜂蜜约要造访100～500万朵花，飞行距离差不多可达45万公里，几乎可绕地球赤道飞行11圈。
+	</p>
+</p>
+<p>五、自律精神
+	<p>
+		蜜蜂象征着自律精神，实际上蜜蜂群体中并没有严格意义上的领导者，也没有所谓的“监工”等角色来监督蜂群的工作，不管是蜂王产卵还是工蜂采蜜几乎都不存在偷懒耍滑的现象，这一点对人类而言更是难能可贵的。
+	</p>
+</p>
+</p>
+    <button onclick="whatTimeIsIt()">现在时间</button>
+    <hr/>
+
+      </div>
+
+      <div class="col-3">
+        <img src="../../../static/images/6c107b6f1e1b4bce3d3c30249c9a5038.png" class="img-fluid w-100">
+      </div>
+    </div>
+
+
+    <div class="row">
+      <div class="col-lg-4">
+        <img src="../../../static/images/lizhongixian.jpg" class="bd-placeholder-img rounded-circle" width="140" height="140" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 140x140" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#777"/><text x="50%" y="50%" fill="#777" dy=".3em"></text></svg>
+
+        <h2>李宗宪</h2>
+        <p>你好，我是李宗宪，现在22岁，在韩国出生。
+我喜欢玩游戏，特别英雄联盟。
+学习方面喜欢数学，一起学习数学吧。</p>
+        <p><a class="btn btn-secondary" href="#" data-toggle="modal" data-target="#lzx">联系办法 &raquo;</a></p>
+      </div><!-- /.col-lg-4 -->
+
+      <div class="col-lg-4">
+        <img src="../../../static/images/jinminzun.jpg" class="bd-placeholder-img rounded-circle" width="140" height="140" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 140x140" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#777"/><text x="50%" y="50%" fill="#777" dy=".3em"></text></svg>
+
+        <h2>金旻俊</h2>
+        <p>我是金旻俊，2001-02-19年出生后一直住在首尔，还有北航21系大二学生，中国留学三年中，一年半网课，忘记了中文。希望回去学校。</p>
+        <p><a class="btn btn-secondary" href="#" data-toggle="modal" data-target="#jmj">联系办法 &raquo;</a></p>
+      </div><!-- /.col-lg-4 -->
+
+      <div class="col-lg-4">
+        <img src="../../../static/images/shian.jpg" class="bd-placeholder-img rounded-circle" width="140" height="140" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 140x140" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#777"/><text x="50%" y="50%" fill="#777" dy=".3em"></text></svg>
+
+        <h2>时冉</h2>
+        <p>我是时冉，北航21系大二学生。11月24日生日，射手座。今年最大的愿望就是可以回国返校上课！</p>
+        <p><a class="btn btn-secondary" href="#" data-toggle="modal" data-target="#sa">联系办法 &raquo;</a></p>
+      </div><!-- /.col-lg-4 -->
+
+    </div><!-- /.row -->
+    <hr>
+    <div class="row">
+      <div class="col-lg-4">
+        <img src="../../../static/images/qiwu.jpg" class="bd-placeholder-img rounded-circle" width="140" height="140" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 140x140" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#777"/><text x="50%" y="50%" fill="#777" dy=".3em"></text></svg>
+
+        <h2>王佳媛</h2>
+        <p>我是王佳媛，北航软件学院一名大二的莘莘学子。10月11日是我生日，从小在马来西亚长大，亦是土生土长的马来西亚人。</p>
+        <p><a class="btn btn-secondary" href="#" data-toggle="modal" data-target="#wjy">联系办法 &raquo;</a></p>
+      </div><!-- /.col-lg-4 -->
+
+      <div class="col-lg-4">
+        <img src="../../../static/images/songtaiyuan.jpg" class="bd-placeholder-img rounded-circle" width="140" height="140" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 140x140" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#777"/><text x="50%" y="50%" fill="#777" dy=".3em"></text></svg>
+
+        <h2>宋泰元</h2>
+        <p>我叫宋泰元。我是在中国留学4年的韩国清州人，北航21系大二学生， 希望新冠病毒能快点结束。想吃中国麻辣烫。</p>
+        <p><a class="btn btn-secondary" href="#" data-toggle="modal" data-target="#stw">联系办法 &raquo;</a></p>
+      </div><!-- /.col-lg-4 -->
+    </div><!-- /.row -->
+  </div>
+
+  <div class="modal fade" id="lzx" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="lzx"><i class="fas fa-qrcode"></i>李宗宪</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <div class="row">
+              <img src="../../../static/images/qrcode/lzxqr_20210611232646.jpg" class="img-fluid w-100">
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal fade" id="jmj" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="jmj"><i class="fas fa-qrcode"></i>金旻俊</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <div class="row">
+              <img src="../../../static/images/qrcode/jmjqr_20210611232020.jpg" class="img-fluid w-100">
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal fade" id="sa" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="sa"><i class="fas fa-qrcode"></i>时冉</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <div class="row">
+              <img src="../../../static/images/qrcode/anqr_20210611234027.jpg" class="img-fluid w-100">
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal fade" id="wjy" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="wjy"><i class="fas fa-qrcode"></i>王佳媛</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <div class="row">
+              <img src="../../../static/images/qrcode/wjyqr_20210611233401.jpg" class="img-fluid w-100">
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal fade" id="stw" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="stw"><i class="fas fa-qrcode"></i>宋泰元</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <div class="row">
+              <img src="../../../static/images/qrcode/stwqr_20210611231205.jpg" class="img-fluid w-100">
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+
+  <hr>
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" 
+    integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" 
+    crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" 
+    integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" 
+    crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.min.js" 
+    integrity="sha384-w1Q4orYjBQndcko6MimVbzY0tgp4pWB4lZ7lr30WKz0vr/aWKhXdBNmNb5D92v7s" 
+    crossorigin="anonymous"></script>
+
+    <audio autoplay>
+      <source src="" type="audio/mp3">
+    </audio>
+</body>
+</html>
